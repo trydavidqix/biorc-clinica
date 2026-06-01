@@ -8,8 +8,10 @@ export const sendContactMessage = async (req: Request, res: Response) => {
     await sendEmail(data)
     res.status(200).json({ success: true, message: 'Mensagem enviada com sucesso!' })
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Erro ao enviar email:', error)
+    if (process.env.NODE_ENV !== 'production') {
+      // eslint-disable-next-line no-console
+      console.error('Erro ao enviar email:', error)
+    }
     res
       .status(500)
       .json({ success: false, message: 'Erro interno ao enviar mensagem.' })

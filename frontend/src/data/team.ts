@@ -1,37 +1,190 @@
-import { Doctor } from '../types'
+import type { Doctor } from "../types";
 
 export const team: Doctor[] = [
-  {
-    id: 'sofia-mendes',
-    name: 'Dra. Sofia Mendes',
-    title: 'Psicóloga Clínica',
-    bio: 'Especializada em psicologia do adulto e adolescente, com mais de 10 anos de experiência em intervenção cognitivo-comportamental.',
-    image: '/images/doctor-1.jpg',
-    specialties: ['Psicologia', 'Psicologia Infantil'],
-  },
-  {
-    id: 'ricardo-alves',
-    name: 'Dr. Ricardo Alves',
-    title: 'Cardiologista',
-    bio: 'Médico especialista em cardiologia, formado na Universidade de Coimbra. Internacional com formação integrada em cardiologia.',
-    image: '/images/doctor-2.jpg',
-    specialties: ['Cardiologia'],
-  },
-  {
-    id: 'joao-santos',
-    name: 'Dr. João Santos',
-    title: 'Clínica Geral',
-    bio: 'Médico de medicina geral e familiar, dedicado ao acompanhamento contínuo e humanizado de pacientes de todas as idades.',
-    image: '/images/doctor-3.jpg',
-    specialties: ['Medicina Geral e Familiar'],
-  },
-  {
-    id: 'ana-ferreira',
-    name: 'Dra. Ana Ferreira',
-    title: 'Enfermeira Especialista',
-    bio: 'Enfermeira com especialização em saúde infantil e pediatria, comprometida com o cuidado de excelência.',
-    image: '/images/doctor-4.jpg',
-    specialties: ['Enfermagem', 'Enfermagem Infantil'],
-  },
-]
-
+	// Dra. Bárbara Reis Canelas
+	{
+		id: "barbara-reis-canelas",
+		name: "Dra. Bárbara Reis Canelas",
+		title: "Psicologia",
+		bio: "Acompanha adultos e adolescentes com uma abordagem humana, centrada no bem-estar emocional e na saúde mental.",
+		// exemplo: ajustar só este cartão (altura mínima + imagem maior)
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center 15%",
+		image: "/images/profissionais/barbara-reis-canelas.webp",
+		specialties: [
+			"Psicologia Clínica",
+			"Avaliação Psicológica",
+			"Psicologia Infantil",
+		],
+	},
+	// Dr. Carlos Costa
+	{
+		id: "carlos-costa",
+		name: "Dr. Carlos Costa",
+		title: "Cardiologia",
+		bio: "Consulta e acompanhamento em cardiologia, com foco na prevenção, diagnóstico e controlo cardiovascular.",
+		// exemplo: imagem ligeiramente maior neste cartão
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center top",
+		image: "/images/profissionais/carlos-costa.webp",
+		specialties: ["Cardiologia"],
+	},
+	// Dr. Manuel Sebe
+	{
+		id: "manuel-sebe",
+		name: "Dr. Manuel Sebe",
+		title: "Medicina Geral e Familiar",
+		bio: "Acompanha famílias com medicina geral e familiar, garantindo seguimento próximo, contínuo e humanizado.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center top",
+		image: "/images/profissionais/manuel-sebe.webp",
+		specialties: ["Medicina Geral e Familiar"],
+	},
+	// Dra. Filipa Lourenço
+	{
+		id: "filipa-lourenco",
+		name: "Dra. Filipa Lourenço",
+		title: "Fisioterapia Pélvica e da Saúde da Mulher",
+		bio: "Fisioterapia pélvica e da saúde da mulher com planos personalizados, acompanhamento dedicado e discreto.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center 10%",
+		image: "/images/profissionais/filipa-lourenco.webp",
+		specialties: ["Fisioterapia Pélvica", "Saúde da Mulher"],
+	},
+	// Dr. Joaquim Sørås
+	{
+		id: "joaquim-soras",
+		name: "Dr. Joaquim Sørås",
+		title: "Osteopatia",
+		bio: "Atua em osteopatia para alívio da dor, melhoria da mobilidade e equilíbrio funcional do corpo.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center 20%",
+		image: "/images/profissionais/joaquim-soras.webp",
+		specialties: ["Osteopatia"],
+	},
+	// Andreia Santos
+	{
+		id: "andreia-santos",
+		name: "Andreia Santos",
+		title: "Estética Avançada",
+		bio: "Acompanha tratamentos de estética avançada com foco num resultado cuidado, natural e personalizado.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center 5%",
+		image: "/images/profissionais/andreia-santos.webp",
+		specialties: ["Estética Avançada"],
+	},
+	// Dr. Miguel Correia
+	{
+		id: "miguel-correia",
+		name: "Dr. Miguel Correia",
+		title: "Medicina Física e Reabilitação",
+		bio: "Realiza acompanhamento em medicina física e reabilitação, com planos ajustados à recuperação funcional de cada pessoa.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center top",
+		image: "/images/profissionais/miguel-correia.webp",
+		specialties: ["Medicina Física e Reabilitação"],
+	},
+	// Dra. Beatriz Lopes
+	{
+		id: "beatriz-lopes",
+		name: "Dra. Beatriz Lopes",
+		title: "Audiologia",
+		bio: "Faz avaliação e acompanhamento em audiologia, com foco na audição, equilíbrio e bem-estar quotidiano.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center top",
+		image: "/images/profissionais/beatriz-lopes.webp",
+		specialties: ["Audiologia"],
+	},
+	// Dra. Bruna Pinto
+	{
+		id: "bruna-pinto",
+		name: "Dra. Bruna Pinto",
+		title: "Psiquiatria",
+		bio: "Presta acompanhamento em psiquiatria com uma abordagem clínica centrada no equilíbrio mental e emocional.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center top",
+		image: "/images/profissionais/bruna-pinto.webp",
+		specialties: ["Psiquiatria"],
+	},
+	// Dra. Cristiana Silva
+	{
+		id: "cristiana-silva",
+		name: "Dra. Cristiana Silva",
+		title: "Nutrição",
+		bio: "Desenvolve planos de nutrição personalizados para apoiar a saúde, energia e prevenção.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center 10%",
+		image: "/images/profissionais/cristiana-silva.webp",
+		specialties: ["Nutrição"],
+	},
+	// Dra. Diana Pinto
+	{
+		id: "diana-pinto",
+		name: "Dra. Diana Pinto",
+		title: "Pediatria",
+		bio: "Acompanha crianças e famílias em pediatria, com um seguimento próximo e preventivo.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center top",
+		image: "/images/profissionais/diana-pinto.webp",
+		specialties: ["Pediatria"],
+	},
+	// Dra. Inês Velhote
+	{
+		id: "ines-velhote",
+		name: "Dra. Inês Velhote",
+		title: "Psicologia da Infância e da Adolescência",
+		bio: "Trabalha a psicologia da infância e da adolescência, apoiando o desenvolvimento emocional e familiar.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center top",
+		image: "/images/profissionais/ines-velhote.webp",
+		specialties: ["Psicologia da Infância e da Adolescência"],
+	},
+	// Dra. Marta Tavares
+	{
+		id: "marta-tavares",
+		name: "Dra. Marta Tavares",
+		title: "Medicina Geral e Familiar",
+		bio: "Faz consulta e seguimento em medicina geral e familiar, com cuidado próximo e contínuo.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center top",
+		image: "/images/profissionais/marta-tavares.webp",
+		specialties: ["Medicina Geral e Familiar"],
+	},
+	// Dra. Patrícia Ferreira
+	{
+		id: "patricia-ferreira",
+		name: "Dra. Patrícia Ferreira",
+		title: "Ginecologia e Obstetrícia",
+		bio: "Acompanha a saúde da mulher em ginecologia e obstetrícia, com atenção preventiva e seguimento dedicado.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center 5%",
+		image: "/images/profissionais/patricia-ferreira.webp",
+		specialties: ["Ginecologia e Obstetrícia"],
+	},
+	// Enfermeira Cátia Paiva
+	{
+		id: "catia-paiva",
+		name: "Enfermeira Cátia Paiva",
+		title: "Enfermagem",
+		bio: "Presta cuidados de enfermagem com proximidade, atenção e apoio em diferentes contextos clínicos.",
+		cardClass: "min-h-[520px]",
+		imageClass: "h-72",
+		imagePosition: "center 10%",
+		image: "/images/profissionais/catia-paiva.webp",
+		specialties: ["Enfermagem"],
+	},
+];

@@ -4,5 +4,7 @@ export interface ContactFormData {
   phone?: string
   specialty?: string
   message?: string
+  privacyConsent?: boolean
+  honeypot?: string
 }
 

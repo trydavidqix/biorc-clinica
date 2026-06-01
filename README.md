@@ -18,6 +18,26 @@ npm run dev
 
 O frontend sobe por padrão em `http://localhost:5173`.
 
+### Publicar no GitHub Pages (branch `gh-pages`)
+
+No frontend, execute:
+
+```bash
+cd frontend
+npm install
+npm run deploy
+```
+
+Isso gera o build e publica automaticamente a branch `gh-pages` com o conteúdo estático.
+Depois, no GitHub, em **Settings > Pages**, configure:
+
+- **Source**: Deploy from a branch
+- **Branch**: `gh-pages`
+- **Folder**: `/ (root)`
+
+A URL final ficará em:
+`https://trydavidqix.github.io/biorc-clinica/`
+
 ### Backend
 
 ```bash

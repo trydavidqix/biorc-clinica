@@ -16,10 +16,16 @@ export const useContactForm = () => {
       phone: '',
       specialty: '',
       message: '',
+      privacyConsent: false,
+      honeypot: '',
     },
   })
 
   const onSubmit = async (data: ContactFormData) => {
+    if (data.honeypot || !data.privacyConsent) {
+      return
+    }
+
     setIsLoading(true)
     setSubmitStatus('idle')
     try {

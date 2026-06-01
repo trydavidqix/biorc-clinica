@@ -21,7 +21,9 @@ app.use('/api/contact', contactRoutes)
 app.get('/health', (_, res) => res.json({ status: 'ok' }))
 
 app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(`🚀 Servidor BIØRC rodando na porta ${PORT}`)
+  if (process.env.NODE_ENV !== 'production') {
+    // eslint-disable-next-line no-console
+    console.log(`🚀 Servidor BIØRC rodando na porta ${PORT}`)
+  }
 })
 
